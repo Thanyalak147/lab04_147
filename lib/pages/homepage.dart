@@ -17,13 +17,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("เมณู อาหารป่า"),
+          backgroundColor: Colors.blue,
         ),
         body: Column(
           children: [
             RadioManulist("ปลากัดต้มแซ่บ", "250"),
             RadioManulist("ยำยุงลายป่า", "220"),
             RadioManulist("ข้าวผัดงูหลาม", "200"),
-            RadioManulist("ข้าวผัดงูหลาม", "200"),
+            RadioManulist("ข้าวผัดงูหลาม", "100"),
             Divider(),
             CheckboxListTile(
                 controlAffinity: ListTileControlAffinity.leading,
@@ -42,8 +43,8 @@ class _HomePageState extends State<HomePage> {
   RadioListTile<String> RadioManulist(String title, String subtitle) {
     return RadioListTile(
       title: Text(title),
-      subtitle: Text("189"),
-      value: subtitle,
+      subtitle: Text(subtitle),
+      value: title,
       groupValue: foodRadio,
       onChanged: (value) {
         setState(() {
